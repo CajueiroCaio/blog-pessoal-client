@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import Navbar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -20,7 +22,8 @@ import Perfil from './paginas/perfil/Perfil';
 function App() {
   return (
     <>
-    <AuthProvider>
+      <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
@@ -42,7 +45,7 @@ function App() {
           </div>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
+      </AuthProvider>
     </>
   );
 }

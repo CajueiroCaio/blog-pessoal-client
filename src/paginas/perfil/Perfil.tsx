@@ -5,15 +5,15 @@ import loginLogo from '../../assets/login.jpg'
 function Perfil() {
   let navigate = useNavigate()
 
-    const { usuario } = useContext(AuthContext)
+  const { usuario } = useContext(AuthContext)
 
-    useEffect(() => {
-        if (usuario.token === "") {
-            alert('Você precisa estar logado')
-            navigate("/login")
-        }
-    }, [usuario.token])
-    
+  useEffect(() => {
+    if (usuario.token === "") {
+      alert('Você precisa estar logado')
+      navigate("/login")
+    }
+  }, [usuario.token])
+
   return (
     <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
       <img className='w-full h-72 object-cover border-b-8 border-white' src={loginLogo} alt="Capa do Perfil" />
